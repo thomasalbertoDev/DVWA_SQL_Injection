@@ -18,8 +18,8 @@
 ```
 
 ### Tahap Ketiga
-```sql
-# Perintah ini digunakan untuk menampilkan ada berapa saja jumlah kolom yang ada
+```sql 
+# Perintah ini digunakan untuk menampilkan ada berapa saja jumlah table yang ada di dalam database nya
 # Tanda (#) digunakan untuk mengabaikan sisa kueri setelahnya.
 1' ORDER BY 3 #
 ```
